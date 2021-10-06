@@ -7,6 +7,10 @@
 <br>
 
 <%--${param.employeeName} - после param берем переменную employeeName (то есть то, что ввел пользователь)--%>
-<h1>Your name: ${param.employeeName}!!!</h1>
+<%--<h1>Your name: ${param.employeeName}!!!</h1>--%>
+
+<%--выводим то что сохраняли в модель nameAttribute и description --%>
+<h1>Your name: ${nameAttribute} ${description}</h1>
+
 </body>
 </html>
