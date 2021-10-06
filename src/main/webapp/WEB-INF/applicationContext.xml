@@ -11,6 +11,7 @@
     	http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+<!--    пакет для сканирования наших классов и файлов-->
     <context:component-scan base-package="ru.eshmakar.spring.mvc" />
 
 <!--    без этого не работает-->

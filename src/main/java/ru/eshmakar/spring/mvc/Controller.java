@@ -10,4 +10,14 @@ public class Controller {
     public String showFirstView(){
         return "first-view";
     }
+
+    @RequestMapping("/askDetails")
+    public String askEmployeeDetails(){
+        return "ask-employee-details-view";
+    }
+
+    @RequestMapping("/showDetails")
+    public String showEmpDetails(){
+        return "show-emp-details-view";
+    }
 }
