@@ -1,12 +1,24 @@
 package ru.eshmakar.spring.mvc;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private int salary;
     private String department;
 
+    private Map<String, String> departmentsList;
+
+
     public Employee() {
+        //это будет выпадающий список департаментов
+        departmentsList = new LinkedHashMap<>();
+        departmentsList.put("Information Technology", "IT");
+        departmentsList.put("Human Resources", "HR");
+        departmentsList.put("Sales", "Sales");
     }
 
     public String getName() {
@@ -39,6 +51,14 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public Map<String, String> getDepartmentsList() {
+        return departmentsList;
+    }
+
+    public void setDepartmentsList(Map<String, String> departmentsList) {
+        this.departmentsList = departmentsList;
     }
 
     @Override

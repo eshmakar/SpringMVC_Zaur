@@ -17,6 +17,21 @@
     Salary <form:input path="salary"/>
     <br><br>
 
+<%--  Вариант №1 - записать все варианты в файл jsp
+<form:select path="department"> - это выпадающее меню для выбора из нескольких вариантов--%>
+<%--    Department <form:select path="department">--%>
+<%--        <form:option value="Information Technology" label="IT"/>--%>
+<%--        <form:option value="Human Resources" label="HR"/>--%>
+<%--        <form:option value="Sales" label="Sales"/>--%>
+<%--    </form:select>--%>
+<%--    <br><br>--%>
+
+<%--Вариант №2 - все департаменты берем из списка Мар--%>
+    Department <form:select path="department">
+        <form:options items="${employee.departmentsList}"/>
+    </form:select>
+
+
     <input type="submit" value="OK">
 
 
