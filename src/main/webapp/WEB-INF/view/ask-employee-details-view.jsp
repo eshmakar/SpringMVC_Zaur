@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <body>
@@ -5,12 +6,23 @@
 <br>
 <br>
 
+<%--форма с полями ввода--%>
+<%--при нажатии на ОК сработает метод showDetails--%>
+<form:form action="showDetails" modelAttribute="employee">
+<%--по умолчанию для name, surname, salary сработает геттеры, поэтому везде будет null, в salary будет 0--%>
+    Name <form:input path="name"/>
+    <br><br>
+    Surname <form:input path="surname"/>
+    <br><br>
+    Salary <form:input path="salary"/>
+    <br><br>
 
-<%--action - означает,какую ссылку открывать при нажатии на кнопки--%>
-<%--name="employeeName" - все что будет введено, будет сохранятся в переменной employeeName --%>
-<form action="/showDetails" method="get">
-    <input type="text" name="employeeName" placeholder="Write your name"/>
-    <input type="submit"/>
-</form>
+    <input type="submit" value="OK">
+
+
+</form:form>
+
+
+
 </body>
 </html>

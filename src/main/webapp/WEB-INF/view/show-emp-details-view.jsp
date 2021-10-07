@@ -10,7 +10,9 @@
 <%--<h1>Your name: ${param.employeeName}!!!</h1>--%>
 
 <%--выводим то что сохраняли в модель nameAttribute и description --%>
-<h1>Your name: ${nameAttribute} ${description}</h1>
+<h1>Your name: ${employee.name}</h1>
+<h1>Your surname: ${employee.surname}</h1>
+<h1>Your salary: ${employee.salary}</h1>
 
 </body>
 </html>
