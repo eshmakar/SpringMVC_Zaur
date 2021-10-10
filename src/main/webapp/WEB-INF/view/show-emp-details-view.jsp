@@ -12,6 +12,7 @@
 <h2>Your surname: ${employee.surname}</h2>
 <h2>Your salary: ${employee.salary}</h2>
 <h2>Your department: ${employee.department}</h2>
+<h2>Your car: ${employee.carBrand}</h2>
 
 </body>
 </html>
