@@ -32,7 +32,5 @@ public class Controller {
             return "ask-employee-details-view";
         else
             return "show-emp-details-view";
-
     }
-
 }
