@@ -1,5 +1,4 @@
-<%--по умолчанию будем показывать вот это--%>
-
+<%--по умолчанию будем показывать эту страницу--%>
 <!DOCTYPE html>
 <html>
 <body>
@@ -9,6 +8,8 @@
 <br>
 
 <%--ссылка на RequestMethod("/askDetails") --%>
-<a href="/askDetails"><h2>Please enter your details</h2></a>
+<a href="/askDetails"><h2>Please enter your details</h2></a><br>
+<a href="/showDetails">Show details</a>
+
 </body>
 </html>

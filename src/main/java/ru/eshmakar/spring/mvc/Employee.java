@@ -1,10 +1,12 @@
 package ru.eshmakar.spring.mvc;
 
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2, message = "The name must be min 2 symbols")//минимальная длина имени, иначе выводится это сообщение
     private String name;
     private String surname;
     private int salary;
@@ -18,7 +20,6 @@ public class Employee {
 
 
     public Employee() {
-        //это будет выпадающий список департаментов
         departmentsList = new LinkedHashMap<>();
         departmentsList.put("Information Technology", "IT");
         departmentsList.put("Human Resources", "HR");

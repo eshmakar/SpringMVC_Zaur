@@ -11,6 +11,7 @@
 <form:form action="showDetails" modelAttribute="employee">
     <%--по умолчанию для name, surname, salary сработает геттеры, поэтому везде будет null, в salary будет 0--%>
     Name <form:input path="name"/>
+    <form:errors path="name"/> <%--если имя меньше 2 символов, выводится ошибка--%>
     <br><br>
     Surname <form:input path="surname"/>
     <br><br>

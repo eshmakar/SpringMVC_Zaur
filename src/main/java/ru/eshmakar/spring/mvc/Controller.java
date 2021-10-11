@@ -1,13 +1,12 @@
 package ru.eshmakar.spring.mvc;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
+import javax.validation.Valid;
+
 
 @org.springframework.stereotype.Controller
 public class Controller {
@@ -26,14 +25,14 @@ public class Controller {
 
 
     @RequestMapping("/showDetails")
-    //@ModelAttribute("employee") - объект Employee будем хранить по бину employee
-    public String showEmpDetails(@ModelAttribute("employee") Employee empl) {
-        //при желании можно менять данные)
-        empl.setName("Mr. "+empl.getName());
-        empl.setSurname(empl.getSurname()+"!");
-        empl.setSalary(empl.getSalary()*10);
+    //@Valid - используется для проверки валидности введенных данных
+    //BindingResult - с помощью этого интерфейса можем получить состояние, произошла ошибка при заполнении данных или нет
+    public String showEmpDetails(@Valid @ModelAttribute("employee") Employee empl, BindingResult bindingResult) {
+        if (bindingResult.hasErrors())//если есть ошибка, возвращаем эту жу страницу
+            return "ask-employee-details-view";
+        else
+            return "show-emp-details-view";
 
-        return "show-emp-details-view";
     }
 
 }
